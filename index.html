@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script data-ad-client="ca-pub-1700209974272060" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <title>AI Fitness Trainer</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <body style="background-color:aliceblue; line-height: 2">
+
+    </body>
+    <h1><span>A</span>
+        <span>I</span>
+        <span>F</span>
+        <span>i</span>
+        <span>t</span>
+        <span>n</span>
+        <span>e</span>
+        <span>s</span>
+        <span>s</span>
+        <span>T</span>
+        <span>r</span>
+        <span>a</span>
+        <span>i</span>
+        <span>n</span>
+        <span>e</span>
+        <span>r</span>
+    </h1>
+
+    <div style="font-weight: bold;">Ready to squat with personal AI trainer?
+    </div>
+    <button type="button" onclick="init()">Start</button>
+    <div class="addthis_inline_share_toolbox"></div>
+
+    <div style="margin-top: 20%; margin-left: 10%; margin-right: 10%; margin-bottom: 5%; margin-top: 10%">Building the muscles of the front of the thigh
+        <div>
+            <a href=#none id="show" onclick="if(hide.style.display=='none') {hide.style.display='';show.innerText='▲close'} else {hide.style.display='none';show.innerText='▶open'}">▶펼치기</a>
+            <div id="hide" style="display: none">
+                Building the muscles of the front of the thigh
+
+
+                <p>Exercise area Thigh Exercise period 1 day Exercise time 20 minutes Fitness equipment Barbell, machine Number of program iterations 4 times The front thigh muscle building is an exercise program that trains the quadriceps muscle, known
+                    as the strongest muscle in the body.</p>
+                <p>The front of the thigh exercise means that if you exercise only the front, the effect of the exercise decreases, so the front and the rear are simultaneously performed. Squat, which is the most basic lower body exercise-Barbell, leg curls
+                    that stimulate the back of the thigh-Lying, lunge that improves balance in the front of the thigh-Barbell, leg curls that strengthen the back of the thigh-Standing, five leg extensions that develop quadriceps.
+                </p>
+                It consists of eggplant movements. You can create elastic thighs by repeating four sets of 15 reps per exercise, connecting five exercises. What are the benefits of squats? 1. Squats Help Build Muscle. They don't just help you achieve wonderful, toned
+                legs; they promote body-wide muscle building by creating an anabolic (muscle building) environment in the body. They work up your quadriceps, hamstrings, calves, abdominal muscles, lower back and your butt too.
+                <p>How many squats a day should I do? Most experts recommend doing a set of 10 to 15 or 20 squats a day, two to three times a week. Fitness Authority recommends the following: 20 squats per day – perfect for beginners.
+                </p>
+                <p>Are squats good for females?
+                </p>
+                <p> “Squats are an excellent exercise to tone glutes, hips and thighs which is generally a concern for most women.”
+                </p>
+
+            </div>
+        </div>
+
+
+    </div>
+    <div><canvas id="canvas"></canvas></div>
+    <div id="label-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
+    <script type="text/javascript">
+        // More API functions here:
+        // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/pose
+
+        // the link to your model provided by Teachable Machine export panel
+        const URL = "https://teachablemachine.withgoogle.com/models/wzV0JtZju/";
+        let model, webcam, ctx, labelContainer, maxPredictions;
+
+        async function init() {
+            const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
+
+            // load the model and metadata
+            // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+            // Note: the pose library adds a tmPose object to your window (window.tmPose)
+            model = await tmPose.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+
+            // Convenience function to setup a webcam
+            const size = 200;
+            const flip = true; // whether to flip the webcam
+            webcam = new tmPose.Webcam(size, size, flip); // width, height, flip
+            await webcam.setup(); // request access to the webcam
+            await webcam.play();
+            window.requestAnimationFrame(loop);
+
+            // append/get elements to the DOM
+            const canvas = document.getElementById("canvas");
+            canvas.width = size;
+            canvas.height = size;
+            ctx = canvas.getContext("2d");
+            labelContainer = document.getElementById("label-container");
+            for (let i = 0; i < maxPredictions; i++) { // and class labels
+                labelContainer.appendChild(document.createElement("div"));
+            }
+        }
+
+        async function loop(timestamp) {
+            webcam.update(); // update the webcam frame
+            await predict();
+            window.requestAnimationFrame(loop);
+        }
+        var status = "stand"
+        var count = 0
+        async function predict() {
+            // Prediction #1: run input through posenet
+            // estimatePose can take in an image, video or canvas html element
+            const {
+                pose,
+                posenetOutput
+            } = await model.estimatePose(webcam.canvas);
+            // Prediction 2: run input through teachable machine classification model
+            const prediction = await model.predict(posenetOutput);
+            if (prediction[1].probability.toFixed(2) > 0.90) {
+                if (status == "squat ") {
+                    count++
+                    var audio = new Audio(count % 10 + '.mp3');
+                    audio.play();
+                }
+                status = "stand "
+            } else if (prediction[0].probability.toFixed(2) == 0.95) {
+                status = "squat "
+            } else if (prediction[2].probability.toFixed(2) == 0.95) {
+                if (status == "squat " || status == "stand ") {
+                    var audio = new Audio('adjust.mp3');
+                    audio.play();
+                }
+                status = "adjust position"
+            }
+
+            for (let i = 0; i < maxPredictions; i++) {
+                const classPrediction =
+                    prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                labelContainer.childNodes[i].innerHTML = classPrediction;
+            }
+
+            // finally draw the poses
+            drawPose(pose);
+        }
+
+        function drawPose(pose) {
+            if (webcam.canvas) {
+                ctx.drawImage(webcam.canvas, 0, 0);
+                // draw the keypoints and skeleton
+                if (pose) {
+                    const minPartConfidence = 0.5;
+                    tmPose.drawKeypoints(pose.keypoints, minPartConfidence, ctx);
+                    tmPose.drawSkeleton(pose.keypoints, minPartConfidence, ctx);
+                }
+            }
+        }
+    </script>
+
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f530eef695fbb1a"></script>
+
+</body>
+</body>
+
+</html>

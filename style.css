@@ -75,10 +75,10 @@ body {
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400,300);
 .frame {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 70%;
-    width: 400px;
-    height: 400px;
+    width: 20%;
+    height: 40%;
     margin-top: -200px;
     margin-left: -200px;
     border-radius: 2px;

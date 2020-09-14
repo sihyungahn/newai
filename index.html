@@ -41,9 +41,9 @@
         <span>e</span>
         <span>r</span>
     </h1>
-    <div style="font-weight: bold;" class="ml-5 mt-1 mb-2">Ready to squat with personal AI trainer?
+    <div style="font-weight: bold;" class="ml-5 mt-1 mb-5">Ready to squat with personal AI trainer?
     </div>
-    <div class="container mt-7">
+    <div class="container mt-4">
         <div class="frame">
             <div class="center">
                 <div class="headline">
@@ -61,7 +61,7 @@
                 </div>
             </div>
         </div>
-	<button type="button" class="btn btn-outline-primary ml-5 mb-2" onclick="init()">Start Squat</button>
+	<button type="button" class="btn btn-outline-primary ml-5 mb-5" onclick="init()">Start Squat</button>
         <div><canvas id="canvas"></canvas></div>
         <div id="label-container"></div>
     </div>
@@ -100,8 +100,8 @@
 
             // append/get elements to the DOM
             const canvas = document.getElementById("canvas");
-            canvas.width = size;
-            canvas.height = size;
+            canvas.width = size; 350%
+            canvas.height = size; 400%
             ctx = canvas.getContext("2d");
             labelContainer = document.getElementById("label-container");
             for (let i = 0; i < maxPredictions; i++) { // and class labels

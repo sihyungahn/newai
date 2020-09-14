@@ -1,6 +1,6 @@
 h1 {
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
     margin-top: 50px;
 }
 
@@ -75,8 +75,7 @@ body {
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400,300);
 .frame {
     position: absolute;
-    top: 30%;
-    left: 100%;
+    left: 97%;
     width: 20%;
     height: 40%;
     margin-top: 0px;

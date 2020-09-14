@@ -43,9 +43,10 @@
     </h1>
     <div style="font-weight: bold;" class="ml-5 mt-1 mb-5">Ready to squat with personal AI trainer?
     </div>
-    <div class="container mt-4">
-        <div class="frame">
-            <div class="center">
+	<button type="button" class="btn btn-outline-primary ml-5 mb-2" onclick="init()">Start Squat</button>
+    <div class="container">
+		<div class="frame">
+			<div class="center">
                 <div class="headline">
                     <div class="small">Squat</div>Counter
                 </div>
@@ -61,13 +62,10 @@
                 </div>
             </div>
         </div>
-	</div>
-	
-	<button type="button" class="btn btn-outline-primary ml-5 mb-2" onclick="init()">Start Squat</button>
-        
 		<div><canvas id="canvas"></canvas></div>
         <div id="label-container"></div>
-    
+    </div>
+	
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

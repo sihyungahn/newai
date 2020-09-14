@@ -102,11 +102,11 @@ body {
 }
 
 .headline {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 16;
     text-transform: uppercase;
     text-align: center;
-    line-height: 22px;
+    line-height: 0px;
 }
 
 .headline .small {

@@ -230,8 +230,8 @@ body {
 }
 
 .gnb-menu a {
-    font-size: 24px;
-    color: #fff;
+    font-size: 15px;
+    color: #282828;
     text-decoration: none;
     position: relative;
     padding: 6px 12px;

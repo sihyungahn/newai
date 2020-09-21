@@ -270,3 +270,13 @@ body {
     left: 50%;
     text-align: center;
 }
+.addthis_inline_share_toolbox {
+	position: absolute;
+	padding: 14%;
+    margin-top: 30%;
+}
+}
+.page-link {
+	margin-bottom: 5%;
+	margin-top: 5%;
+}

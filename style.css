@@ -226,6 +226,15 @@ body {
     margin-left: 10%
 }
 
+.container {
+    width: 100%;
+    /* padding-right: 15px; */
+    /* padding-left: 15px; */
+    margin-right: auto;
+    margin-top: 110px;
+    margin-left: auto;
+}
+
 .canvas {
     position: absolute;
     margin-top: 60%;
@@ -280,5 +289,10 @@ width: 30px
 }
 .explain {
 	position: relative;
+	text-align: center;
+	margin-left:10px;
+	margin-right:10x;
+}
+.label-container{
 	text-align: center;
 }

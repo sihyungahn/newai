@@ -274,3 +274,11 @@ body {
 	margin-bottom: 0;
 	margin-top: 0;
 }
+.addthis_inline_share_toolbox{
+margin-top: 40%;
+width: 30px
+}
+.explain {
+	position: relative;
+	text-align: center;
+}

@@ -279,3 +279,9 @@ body {
 	margin-bottom: 0;
 	margin-top: 0;
 }
+.explain {
+	margin-top: 5%; 
+	margin-left: 10%; 
+	margin-right: 10%; 
+	margin-bottom: 5%;
+}

@@ -129,12 +129,8 @@
         async function predict() {
             // Prediction #1: run input through posenet
             // estimatePose can take in an image, video or canvas html element
-            const {
-                pose,
-                posenetOutput
-            } = await model.estimatePose(webcam.canvas);
+            const prediction = await model.predict(webcam.canvas);
             // Prediction 2: run input through teachable machine classification model
-            const prediction = await model.predict(posenetOutput);
             if (prediction[0].className == "plank" && prediction[0].probaility.toFixed(2) == 1.00) {
                 labelContainer.childNodes[0].innerHTML = "plank explain"
             } else if (prediction[1].className == "wrong position" && prediction[1].probaility.toFixed(2) == 1.00) {

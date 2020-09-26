@@ -313,13 +313,13 @@ body {
 
 .hoverbox {
     position: absolute;
-    top: 41%;
-    left: 47%;
+    top: 53%;
+    left: 48%;
     transform: translate(-50%, -50%);
-    width: 60%;
-    height: 60%;
+    width: 103%;
+    height: 39%;
     background: url('./img/background.png') center center / 100% no-repeat;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 .hoverbox .screen {

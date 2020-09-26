@@ -288,8 +288,10 @@ body {
 }
 
 .addthis_inline_share_toolbox {
+	position: relative;
     margin-top: 40%;
-    width: 30px
+    width: 100%;
+	text-align:center;
 }
 
 .explain {

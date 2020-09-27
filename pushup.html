@@ -94,7 +94,7 @@
         // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/pose
 
         // the link to your model provided by Teachable Machine export panel
-        const URL = "https://teachablemachine.withgoogle.com/models/wzV0JtZju/";
+        const URL = "https://teachablemachine.withgoogle.com/models/c66q5Pt49/";
         let model, webcam, ctx, labelContainer, maxPredictions;
 
         async function init() {
@@ -132,7 +132,7 @@
             window.requestAnimationFrame(loop);
         }
         var progress = 327
-        var status = "stand"
+        var status = "pushup"
         var count = 0
         async function predict() {
             // Prediction #1: run input through posenet
@@ -144,7 +144,7 @@
             // Prediction 2: run input through teachable machine classification model
             const prediction = await model.predict(posenetOutput);
             if (prediction[0].probability.toFixed(2) > 0.90) {
-                if (status == "squat") {
+                if (status == "pushdown") {
                     count++
                     var audio = new Audio(count % 10 + '.mp3');
                     audio.play();
@@ -155,11 +155,11 @@
                     $('.progress').css('stroke-dashoffset', progress);
                     $('#counter').html(count);
                 }
-                status = "stand"
+                status = "pushup"
             } else if (prediction[0].probability.toFixed(2) == 0.95) {
-                status = "squat"
+                status = "pushdown"
             } else if (prediction[2].probability.toFixed(2) == 0.95) {
-                if (status == "squat" || status == "stand") {
+                if (status == "pushdown" || status == "pushup") {
                     var audio = new Audio('adjust.mp3');
                     audio.play();
                 }

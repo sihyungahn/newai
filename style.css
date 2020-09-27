@@ -275,7 +275,8 @@ body {
 
 .box {
     width: 100%;
-    background-color: orange;
+    background-color: black;
+	color: white;
     position: absolute;
     margin-left: -50%;
     left: 50%;

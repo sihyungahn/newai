@@ -305,125 +305,89 @@ body {
 .label-container {
     text-align: center;
 }
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
+/*body 초기화*/
 
-/* body {
-    background: #333;
-} */
-
-
-/* 웹문서 자체 배경색 지정 */
-
-/* .hoverbox {
-    position: absolute;
-    top: 53%;
-    left: 48%;
-    transform: translate(-50%, -50%);
-    width: 103%;
-    height: 39%;
-    background: url('./img/background.png') center center / 100% no-repeat;
-    opacity: 0.8;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", serif;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
 }
 
-.hoverbox .screen {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    height: 70%;
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(90deg, #051937, #004d7a, #008793, #00bf72, #a8eb12);
 }
 
-.hoverbox .screen [class*='hud'] {
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#main-menu>li {
+    float: left;
+    position: relative;
+}
+
+#main-menu>li>a {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    display: block;
+    padding: 14px 36px;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+#main-menu>li:nth-child(1)>a {
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+#sub-menu {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    background: #182952;
     opacity: 0;
-    transition: all 1s;
+    visibility: hidden;
+    transition: all 0.15s ease-in;
 }
 
-.hoverbox .screen [class*='hud'] img {
-    max-width: 100%;
+#sub-menu>li {
+    padding: 16px 28px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-.hoverbox .screen:hover [class*='hud'] {
-    opacity: 0.8;
+#sub-menu>li>a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
 }
 
-.hoverbox .screen .hud01 {
-    animation: rolling01 5s linear infinite;
-    width: 80%;
+#main-menu>li:hover #sub-menu {
+    opacity: 1;
+    visibility: visible;
 }
 
-.hoverbox .screen .hud02 {
-    animation: rolling02 10s infinite alternate;
+#sub-menu>li>a:hover {
+    text-decoration: underline;
 }
 
-.hoverbox .screen .hud03 {
-    animation: rollandscale 3s infinite;
+section {
+    column-width: 15em;
+    background: #dadadf;
+    padding: 2em 12em;
 }
-
-.hoverbox .screen .hud04 {}
-
-.hoverbox .screen .hud05 {
-    animation: rolling02 6s infinite alternate;
-}
-
-.hoverbox .screen .hud06 {
-    top: 22%;
-}
-
-
-/* rotate 속성으로 1바퀴 돌아가는 키프레임 */
-
-@keyframes rolling01 {
-    0 {
-        transform: translate(-50%, -50%) rotate(0);
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
-
-
-/* rotate 속성으로 1바퀴 돌아가는데, 초반에는 빠르게 돌다가 천천히 돌아가는 키프레임 */
-
-@keyframes rolling02 {
-    0 {
-        transform: translate(-50%, -50%) rotate(0);
-    }
-    30% {
-        transform: translate(-50%, -50%) rotate(200deg);
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
-
-
-/* rotate 속성으로 1바퀴 돌리고 중간에 크기도 변화기시키는 키프레임  scale()의 1이 기본값!! 값이 1보다 작으면 크기가 작아지고 1보다 값이 크면 크기가 커짐 */
-
-@keyframes rollandscale {
-    0 {
-        transform: translate(-50%, -50%) rotate(0) scale(1);
-    }
-    35% {
-        transform: translate(-50%, -50%) rotate(360deg) scale(1);
-    }
-    40% {
-        transform: translate(-50%, -50%) rotate(360deg) scale(.5);
-    }
-    60% {
-        transform: translate(-50%, -50%) rotate(0deg) scale(.5);
-    }
-    65% {
-        transform: translate(-50%, -50%) rotate(0deg) scale(1);
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg) scale(1);
-    }
-} */
 
 .feedback {
     text-align: center;

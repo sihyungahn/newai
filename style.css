@@ -314,7 +314,7 @@ body {
 
 /* 웹문서 자체 배경색 지정 */
 
-.hoverbox {
+/* .hoverbox {
     position: absolute;
     top: 53%;
     left: 48%;
@@ -423,11 +423,32 @@ body {
     100% {
         transform: translate(-50%, -50%) rotate(360deg) scale(1);
     }
-}
+} */
 
 .feedback {
     text-align: center;
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.gallerycontroller {
+    width: 0px;
+    /*아래쪽 상자의 가로크기*/
+    position: absolute;
+    left: -100%;
+}
+
+.gallerycontent {
+    position: relative;
+    text-align: center;
+    /*사진이 나오는 상자의 가로*/
+    /*높이*/
+    border: 0px solid black;
+    /*테두리*/
+    background-color: white;
+    /*배경색*/
+    padding: 0px;
+    /*안쪽여백*/
+    display: block;
 }

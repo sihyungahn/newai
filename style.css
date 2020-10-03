@@ -1,5 +1,5 @@
 h1 {
-    background-color: black;
+    background-color: white;
     text-align: center;
     font-size: 30px;
 }
@@ -256,7 +256,7 @@ body {
     position: relative;
     /* padding: 6px 12px; */
 }
-
+/* 
 .gnb-menu a::after {
     content: "";
     position: absolute;
@@ -271,7 +271,7 @@ body {
 
 .gnb-menu a:hover::after {
     width: 100%;
-} */
+} */ */
 
 .box {
     width: 100%;

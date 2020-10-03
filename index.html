@@ -2,23 +2,37 @@
 <html lang="en">
 
 <head>
-	<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NLJKRQZ');</script>
-<!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NLJKRQZ');
+    </script>
+    <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M13PRV7RR5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M13PRV7RR5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-M13PRV7RR5');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-M13PRV7RR5');
+    </script>
     <meta charset="UTF-8">
     <!-- Required meta tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
@@ -36,10 +50,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLJKRQZ"
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLJKRQZ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <!-- End Google Tag Manager (noscript) -->
+
     <body style="background-color:white; line-height: 2">
 
     </body>
@@ -72,47 +87,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span>r</span><br>
         </h1>
     </a>
-    <nav role="navigation">
-        <ul id="main-menu">
-            <li><a href="index.html">home</a></li>
-            <li><a href="#">exercise</a>
-                <ul id="sub-menu">
-                    <li><a href="squat.html" aria-label="subemnu">squat</a></li>
-                    <li><a href="lunges.html" aria-label="subemnu">Lunges</a></li>
-                    <li>
-                        <a href="pushup.html" aria-label="subemnu">Push-up</a>
-                    </li>
-                    <li>
-                        <a href="plank.html" aria-label="subemnu">Plank</a>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="#">Health care (coming soon)</a>
-                <ul id="sub-menu">
-                    <li>
-                        <a href="#" aria-label="subemnu">거북목</a>
-                    </li>
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Yoga (coming soon)</a>
-                <ul id="sub-menu">
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
-                </ul>
-            </li>
-            <li><a href="contact.html">About us</a></li>
 
-        </ul>
+
+    <nav class="gnb-menu">
+        <a href="squat.html">Squat</a>
+        <a href="pushup.html">Pushup</a>
+        <a href="lunges.html">Lunges</a>
+        <a href="plank.html">Plank</a>
     </nav>
-What is AI Fitness trainer?
-	<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
     <div class="gallerycontent" subject="사진-1">
         <!--제목을 넣습니다-->
         <img src="https://i.ibb.co/pRh0Ktj/1-5f72a9a0ddsdf53b.png" width="100%" height="100%">
@@ -150,16 +134,15 @@ What is AI Fitness trainer?
             <input type="radio" name="mode" value="manual" onClick="preparemode('manual')">
         </form>
     </div>
-	<img src="move.gif" border="0" width="100%" height="50%">
-	<img src="https://i.ibb.co/tztR9fB/Fitness-healthy-lifestyle-Pix-Teller.png" alt="Fitness-healthy-lifestyle-Pix-Teller" border="0" width="100%" height="50%">
+    <img src="move.gif" border="0" width="100%" height="50%">
+    <img src="https://i.ibb.co/tztR9fB/Fitness-healthy-lifestyle-Pix-Teller.png" alt="Fitness-healthy-lifestyle-Pix-Teller" border="0" width="100%" height="50%">
 
-<br><br><br><br>
+    <br><br><br><br>
     <div class="feedback" style="
     text-align: center;
 ">
-   Give us feedback at  <A href="https://www.facebook.com/pg/AI-fitness-trainer-100429885168615">our Facebook page</A><br><br><br><br>
-    
-Help us to provide better services</div>
+        Give us feedback at
+        <A href="https://www.facebook.com/pg/AI-fitness-trainer-100429885168615">our Facebook page</A><br><br><br><br> Help us to provide better services</div>
 
 
 
@@ -174,16 +157,16 @@ Help us to provide better services</div>
             <div class="hud06 "><img src="./img/background-deco01.png "></div>
         </div>
     </div> -->
-	
-	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="
+
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="
     text-align: center;
 ">
-<input type="hidden" name="cmd" value="_donations" />
-<input type="hidden" name="business" value="sihyungahn817@gmail.com" />
-<input type="hidden" name="currency_code" value="CAD" />
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-<img alt="" border="0" src="https://www.paypal.com/en_CA/i/scr/pixel.gif" width="1" height="1" />
-</form>
+        <input type="hidden" name="cmd" value="_donations" />
+        <input type="hidden" name="business" value="sihyungahn817@gmail.com" />
+        <input type="hidden" name="currency_code" value="CAD" />
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+        <img alt="" border="0" src="https://www.paypal.com/en_CA/i/scr/pixel.gif" width="1" height="1" />
+    </form>
 
     <div class="container ">
         <div class="row ">
@@ -198,15 +181,15 @@ Help us to provide better services</div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js "></script>
-	<script type="text/javascript" src="practice.js"></script>
+    <script type="text/javascript" src="practice.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js "></script>
-	<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-na.amazon-adsystem.com/e/cm?ref=tf_til&t=aldnj369-20&m=amazon&o=15&p=8&l=as1&IS1=1&npa=1&asins=B07DDGJ574&linkId=d572bea2dd5d385aed275ec7cb4d3a63&bc1=ffffff&lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
+    <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-na.amazon-adsystem.com/e/cm?ref=tf_til&t=aldnj369-20&m=amazon&o=15&p=8&l=as1&IS1=1&npa=1&asins=B07DDGJ574&linkId=d572bea2dd5d385aed275ec7cb4d3a63&bc1=ffffff&lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
     </iframe>
-	<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-na.amazon-adsystem.com/e/cm?ref=tf_til&t=aldnj369-20&m=amazon&o=15&p=8&l=as1&IS1=1&npa=1&asins=B07TYMTH68&linkId=7fcf84e342a6556df1dc8ea0b053d423&bc1=ffffff&lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
+    <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-na.amazon-adsystem.com/e/cm?ref=tf_til&t=aldnj369-20&m=amazon&o=15&p=8&l=as1&IS1=1&npa=1&asins=B07TYMTH68&linkId=7fcf84e342a6556df1dc8ea0b053d423&bc1=ffffff&lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
     </iframe>
 
-	<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-na.amazon-adsystem.com/e/cm?ref=tf_til&t=aldnj369-20&m=amazon&o=15&p=8&l=as1&IS1=1&npa=1&asins=B07RBN3JYK&linkId=5e88a0c2d3c2241f57143619b31e5341&bc1=ffffff&lt1=_blank&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
+    <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-na.amazon-adsystem.com/e/cm?ref=tf_til&t=aldnj369-20&m=amazon&o=15&p=8&l=as1&IS1=1&npa=1&asins=B07RBN3JYK&linkId=5e88a0c2d3c2241f57143619b31e5341&bc1=ffffff&lt1=_blank&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
     </iframe>
 </body>
 <div style="text-align:right; font-size: 10px ">&#169; AHN.CO ALL RIGHTS RESERVED</div>

@@ -437,7 +437,7 @@ input[id*="answer"] {
 input[id*="answer"]+label {
     display: block;
     padding: 20px;
-    border: 1px solid #232188;
+    border: 3px solid #232188;
     border-bottom: 0;
     color: #fff;
     font-weight: 900;

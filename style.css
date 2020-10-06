@@ -309,7 +309,7 @@ body {
     text-align: center;
     /*사진이 나오는 상자의 가로*/
     /*높이*/
-    border: 0px solid black;
+    border: 5px solid lightpink;
     /*테두리*/
     background-color: white;
     /*배경색*/

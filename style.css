@@ -564,10 +564,10 @@ html,
             margin: 0;
             padding: 0;
             border: 0;
-            font-size: 44%;
+            font-size: 100%;
             do: inherit;
             vertical-align: baseline;
-        }
+    
         
         article,
         aside,

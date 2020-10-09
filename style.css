@@ -395,8 +395,13 @@ body {
 .feedback {
     text-align: center;
     font-weight: bold;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: auto;
+	box-shadow: 2px 2px 2px 2px gray; 
+	display: block;  
+	width: 162px;
+	
+	position: absolute;
+	
 }
 
 .gallerycontroller {

@@ -398,9 +398,8 @@ body {
     margin: auto;
 	box-shadow: 2px 2px 2px 2px gray; 
 	display: block;  
-	width: 162px;
-	
-	position: absolute;
+	width: 162px;	
+	position: relative;
 	
 }
 

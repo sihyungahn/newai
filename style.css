@@ -328,7 +328,7 @@ body {
     -webkit-transition: all 0.25s ease;
     transition: all 0.25s ease;
 }
-.container {
+.counter-container {
     width: 100%;
     /* padding-right: 15px; */
     /* padding-left: 15px; */

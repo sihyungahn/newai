@@ -388,11 +388,7 @@ body {
     width: 100%;
 }
 
-.label-container {
-    text-align: center;
-	display:block;
-	position: relative;
-}
+
 
 .feedback {
     text-align: center;

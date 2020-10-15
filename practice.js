@@ -89,18 +89,3 @@ else if (window.attachEvent)
     window.attachEvent("onload", startgallery)
 else if (document.getElementById)
     window.onload = startgallery
-
-function resize(canvas) {
-  // 브라우저에서 canvas가 표시되는 크기 탐색
-  var displayWidth  = canvas.clientWidth;
-  var displayHeight = canvas.clientHeight;
- 
-  // canvas가 같은 크기가 아닐 때 확인
-  if (canvas.width  != displayWidth ||
-      canvas.height != displayHeight) {
- 
-    // canvas를 동일한 크기로 수정
-    canvas.width  = displayWidth;
-    canvas.height = displayHeight;
-  }
-}

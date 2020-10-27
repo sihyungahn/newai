@@ -119,6 +119,162 @@ Exercise
     </h1>
     </a>
 	
+	 <!-- 네비게이션  -->
+
+	<nav class="navbar navbar-default">
+
+		<div class="navbar-header">
+
+			<button type="button" class="navbar-toggle collapsed"
+
+				data-toggle="collapse" data-target="bs-example-navbar-collapse-1"
+
+				aria-expaned="false">
+
+				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+
+					class="icon-bar"></span>
+
+			</button>
+
+		
+
+		</div>
+
+		<div class="collapse navbar-collapse"
+
+			id="#bs-example-navbar-collapse-1">
+
+			<!-- <ul class="nav navbar-nav">
+
+				
+
+				<li class="active"><a href="bbs.jsp">Table</a></li>
+
+			</ul> -->
+
+
+
+
+
+			<%
+
+				//라긴안된경우
+
+				if (userID == null) {
+
+			%>
+
+			<ul class="nav navbar-nav navbar-right">
+
+				<li class="dropdown"><a href="#" class="dropdown-toggle"
+
+					data-toggle="dropdown" role="button" aria-haspopup="true"
+
+
+ 
+					aria-expanded="false">접속하기<span class="caret"></span></a>
+
+					<ul class="dropdown-menu">
+
+						<li><a href="login.jsp">Sign in</a></li>
+
+						<li><a href="join.jsp">Sign up</a></li>
+
+					</ul></li>
+
+			</ul>
+
+			<%
+
+				} else {
+
+			%>
+
+			<ul class="nav navbar-nav navbar-right">
+
+				<li class="dropdown"><a href="#" class="dropdown-toggle"
+
+					data-toggle="dropdown" role="button" aria-haspopup="true"
+
+
+ 
+					aria-expanded="false">회원관리<span class="caret"></span></a>
+
+					<ul class="dropdown-menu">
+
+						<li><a href="logoutAction.jsp">로그아웃</a></li>
+
+					</ul></li>
+
+			</ul>
+
+			<%
+
+				}
+
+			%>
+
+		</div>
+
+	</nav>
+
+	<!-- 게시판 -->
+
+	<div class="container">
+
+		<div class="row">
+
+			<form method="post" action="writeAction.jsp">
+
+				<table class="table table-striped"
+
+					style="text-align: center; border: 1px solid #dddddd">
+
+					<thead>
+
+						<tr>
+
+							<th colspan="2"
+
+								style="background-color: #eeeeee; text-align: center;">Board
+
+								Type</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody>
+
+						<tr>
+
+							<td><input type="text" class="form-control" placeholder="Title" name="bbsTitle" maxlength="50"/></td>
+
+						</tr>
+
+						<tr>
+
+							<td><textarea class="form-control" placeholder="글 내용" name="bbsContent" maxlength="2048" style="height: 350px;"></textarea></td>
+
+						</tr>
+
+					</tbody>
+
+				</table>	
+
+				<input type="submit" class="btn btn-primary pull-right" value="Write" />
+
+			</form>
+
+		</div>
+
+	</div>
+
+
+
+	 
+	 
 	<br><br><br><br>
 	<div class="feedback" style="text-align: center;">
     Give us feedback at  <A href="https://www.facebook.com/pg/AI-fitness-trainer-100429885168615">our Facebook page</A><br><br><br><br>

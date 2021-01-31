@@ -440,7 +440,6 @@ body {
 
 .gallerycontroller {
     width: 0px;
-    /*아래쪽 상자의 가로크기*/
     position: absolute;
     left: -100%;
 }
@@ -448,14 +447,13 @@ body {
 .gallerycontent {
     position: relative;
     text-align: center;
-    /*사진이 나오는 상자의 가로*/
-    /*높이*/
+    
     border: 5px solid lightpink;
-    /*테두리*/
+    
     background-color: white;
-    /*배경색*/
+    
     padding: 0px;
-    /*안쪽여백*/
+    
     display: block;
 	
 }

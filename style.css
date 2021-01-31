@@ -1,3 +1,13 @@
+
+.homepage-image {
+	border:0;
+	width:100%; 
+	display: block;
+	margin: 0px auto; 
+	box-shadow: 2px 2px 2px 2px gray; 
+	padding-top: 0px;
+	margin-bottom: 20px;
+}
 h1 {
     background-color: white;
     text-align: center;
@@ -69,7 +79,9 @@ h1 span:nth-child(16) {
 }
 
 body {
-    font: 15px 'Noto Sans CJK KR', Noto Sans KR, sans-serif
+    font: 15px 'Noto Sans CJK KR', Noto Sans KR, sans-serif;
+	background-color:white; 
+	line-height: 2;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400,300);

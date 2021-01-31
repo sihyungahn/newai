@@ -458,8 +458,8 @@ body {
 	
 }
 .gallerycontent img {
-	width=50%;
-	height=50%;
+	width:50%;
+	height:50%;
 }
 .move-gif {
 	border:0;  

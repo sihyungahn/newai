@@ -110,13 +110,33 @@ body {
 .jb-text { position: absolute; top: 50%; width: 100%; }
 .jb-text p { margin-top: -24px; text-align: center; font-size: 48px; color: #ffffff; }
 
+.website-description {
+	text-align: center; 
+	font-style: italic; 
+	font-weight: bold; 
+	line-height:3; 
+	margin-top: 48px;
+	font-size: 20px;
+	margin-left: 5px; 
+	margin-right:5px;
+}
+
 .center {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
+.user-picture {
+	text-align: center;
+	font-style: italic;
+	font-weight: bold; 
+	box-shadow: 2px 2px 2px 2px gray;
+	display: block; 
+	margin: 10px auto; 
+	width: 200px;
+	border-radius: 5%;
+}
 .headline {
     font-weight: 700;
     font-size: 16;
@@ -437,8 +457,18 @@ body {
     padding: 0px;
     /*안쪽여백*/
     display: block;
+	
 }
-
+.gallerycontent img {
+	width=50%;
+	height=50%;
+}
+.move-gif {
+	border:0;  
+	width:80%; 
+	display: block; 
+	margin: 10px auto;
+}
 
 
 .accordion {

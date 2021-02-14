@@ -734,11 +734,14 @@ html,
             -o-transition: .5s ease-in-out;
             transition: .5s ease-in-out;
             overflow: scroll;
+			
         }
         
         .card-body-hashtag {
             color: #2478FF;
             font-style: italic;
+			
+
         }
         
         .card-body-footer {
@@ -750,6 +753,7 @@ html,
             font-size: 14px;
             color: #9FA5A8;
             padding: 0 15px;
+			
         }
         
         .icon {
@@ -889,7 +893,7 @@ html,
 
 body {
   background:#efefef;
-  height: 10000px;
+  height: 100%;
 }
 .reloadpage {
   position: fixed;

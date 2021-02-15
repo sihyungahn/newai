@@ -723,11 +723,11 @@ html,
         
         .card:hover .card-body-description {
             opacity: 1;
-            -webkit-transition: .5s ease-in-out;
-            -moz-transition: .5s ease-in-out;
-            -ms-transition: .5s ease-in-out;
-            -o-transition: .5s ease-in-out;
-            transition: .5s ease-in-out;
+            -webkit-transition: .5s ease-in;
+            -moz-transition: .5s ease-in;
+            -ms-transition: .5s ease-in;
+            -o-transition: .5s ease-in;
+            transition: .5s ease-in;
             overflow: scroll;
 			
         }

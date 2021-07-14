@@ -99,73 +99,64 @@ window.addEventListener("scroll", function() {
   }
 }, false);
 
+// nav
+ let dropdowns = document.querySelectorAll('.navbar .dropdown-toggler')
+let dropdownIsOpen = false
 
- //Nav 
-const menu = document.querySelector('#mobile-menu')
-const menuLinks = document.querySelector('.navbar__menu')
-const navLogo = document.querySelector('#navbar__logo')
-// Display Mobile menu 
+// Handle dropdown menues
+if (dropdowns.length) {
+  // Usually I don't recommend doing this (adding many event listeners to elements have the same handler)
+  // Instead use event delegation: https://javascript.info/event-delegation
+  // Why: https://gomakethings.com/why-event-delegation-is-a-better-way-to-listen-for-events-in-vanilla-js
+  // But since we only have two dropdowns, no problem with that. 
+  dropdowns.forEach((dropdown) => {
+    dropdown.addEventListener('click', (event) => {
+      let target = document.querySelector(`#${event.target.dataset.dropdown}`)
 
-const mobileMenu = () => {
-	menu.classList.toggle('is-active')
-	menuLinks.classList.toggle('active')
+      if (target) {
+        if (target.classList.contains('show')) {
+          target.classList.remove('show')
+          dropdownIsOpen = false
+        } else {
+          target.classList.add('show')
+          dropdownIsOpen = true
+        }
+      }
+    })
+  })
 }
 
-menu.addEventListener('click', mobileMenu);
+// Handle closing dropdowns if a user clicked the body
+window.addEventListener('mouseup', (event) => {
+  if (dropdownIsOpen) {
+    dropdowns.forEach((dropdownButton) => {
+      let dropdown = document.querySelector(`#${dropdownButton.dataset.dropdown}`)
+      let targetIsDropdown = dropdown == event.target
 
+      if (dropdownButton == event.target) {
+        return
+      }
 
-// Show active menu when scrolling
-const highlightMenu = () => {
-	const elem = document.querySelector('.highlight');
-	const homeMenu = document.querySelector('#home-page');
-	const aboutMenu = document.querySelector('#about');
-	const servicesMenu = document.querySelector('#services');
-	let scrollPos = window.scrollY;
-	// console.log(scrollPos);
-
- // adds 'highlight' class to my menu items
- if (window.innerWidth > 960 && scrollPos < 600) {
-    homeMenu.classList.add('highlight');
-    aboutMenu.classList.remove('highlight');
-    return;
-  } else if (window.innerWidth > 960 && scrollPos < 1400) {
-    aboutMenu.classList.add('highlight');
-    homeMenu.classList.remove('highlight');
-    servicesMenu.classList.remove('highlight');
-    return;
-  } else if (window.innerWidth > 960 && scrollPos < 2345) {
-    servicesMenu.classList.add('highlight');
-    aboutMenu.classList.remove('highlight');
-    return;
+      if ((!targetIsDropdown) && (!dropdown.contains(event.target))) {
+        dropdown.classList.remove('show')
+      }
+    })
   }
+})
 
-  if ((elem && window.innerWIdth < 960 && scrollPos < 600) || elem) {
-    elem.classList.remove('highlight');
-  }
-};
+// Open links in mobiles
+function handleSmallScreens() {
+  document.querySelector('.navbar-toggler')
+    .addEventListener('click', () => {
+    let navbarMenu = document.querySelector('.navbar-menu')
 
-window.addEventListener('scroll', highlightMenu);
-window.addEventListener('click', highlightMenu);
-//  Close mobile Menu when clicking on a menu item
-const hideMobileMenu = () => {
-  const menuBars = document.querySelector('.is-active');
-  if (window.innerWidth <= 768 && menuBars) {
-    menu.classList.toggle('is-active');
-    menuLinks.classList.remove('active');
-  }
-};
+    if (navbarMenu.style.display === 'flex') {
+      navbarMenu.style.display = 'none'
+      return
+    }
 
-menuLinks.addEventListener('click', hideMobileMenu);
-navLogo.addEventListener('click', hideMobileMenu);
+    navbarMenu.style.display = 'flex'
+  })
+}
 
-//  Close mobile Menu when clicking on a menu item
-const hideMobileMenu = () => {
-  const menuBars = document.querySelector('.is-active');
-  if (window.innerWidth <= 768 && menuBars) {
-    menu.classList.toggle('is-active');
-    menuLinks.classList.remove('active');
-  }
-};
-
-menuLinks.addEventListener('click', hideMobileMenu);
-navLogo.addEventListener('click', hideMobileMenu);
+handleSmallScreens()
